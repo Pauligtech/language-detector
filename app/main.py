@@ -6,7 +6,7 @@ from app.model.model import __version__ as model_version
 
 
 
-
+# Create FastAPI object
 app = FastAPI()
 
 class TextIn(BaseModel):
@@ -16,7 +16,7 @@ class predictionOut(BaseModel):
     language: str
 
 
-
+# API operations
 @app.get("/")
 def home():
     return{"health_check": "OK", "model_version": model_version}
